@@ -1,0 +1,53 @@
+#include<iostream>
+using namespace std;
+class student
+{
+        private:
+  
+        char name[20];
+        char regd[30];
+        char branch[10];
+        int sem;
+        public:
+        
+        void input();
+        void display();
+                        
+};
+void student::input()
+{
+        cout<<"Enter Name:";
+        cin>>name;
+        cout<<"Enter Regdno.:";
+        cin>>regd;
+        cout<<"Enter Branch:";
+        cin>>branch;
+        cout<<"Enter Sem:";
+        cin>>sem;
+}
+void student::display()
+{
+        cout<<"\nName:"<<name;
+        cout<<"\nRegdno.:"<<regd;
+        cout<<"\nBranch:"<<branch;
+        cout<<"\nSem:"<<sem;
+}
+int main()
+{
+        student std[5];    //array of students object
+    int n, i;
+
+    cout << "Enter total number of students: ";
+    cin >> n;
+     
+    for(i=0; i<n; i++){
+        cout << "Enter details of student " << i+1 << ":\n";
+        std[i].input();
+    }
+    
+    for(i=0; i<n; i++){
+        cout << "\nDetails of student " << i+1 << ":\n";
+        std[i].display();
+        }
+        return 0;
+}
