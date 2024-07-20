@@ -34,7 +34,7 @@ void student::display()
 }
 int main()
 {
-        student std[5];    //array of students object
+        student std[5];   
     int n, i;
 
     cout << "Enter total number of students: ";
